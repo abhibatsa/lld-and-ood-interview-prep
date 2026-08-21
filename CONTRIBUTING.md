@@ -16,7 +16,7 @@ fix errors:
   the pattern — overuse of design patterns is a real anti-pattern worth
   naming explicitly.
 - LLD problems follow the same shape: requirements → class design →
-  key relationships → code sketch → what we'd do differently.
+  key relationships → code sketch → best practices.
 - Concurrency content must be technically precise — this is the category
   where hand-wavy explanations do the most damage, since subtle
   concurrency bugs are exactly what these docs are trying to prevent.
