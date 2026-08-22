@@ -30,6 +30,9 @@ reinvented here — GoF categorization is correct and worth keeping).
 - [DRY Principle](./design-principles/dry.md)
 - [YAGNI Principle](./design-principles/yagni.md)
 - [KISS Principle](./design-principles/kiss.md)
+- [Composition Over Inheritance](./design-principles/composition-over-inheritance.md)
+- [Tell, Don't Ask Principle](./design-principles/tell-dont-ask.md)
+- [Law of Demeter](./design-principles/law-of-demeter.md)
 - [SOLID Principles with Pictures](./design-principles/solid-with-pictures.md)
 - [SOLID Principles with Code](./design-principles/solid-with-code.md)
 
@@ -55,6 +58,25 @@ reinvented here — GoF categorization is correct and worth keeping).
 - [Activity Diagram](./uml/activity-diagram.md)
 - [State Machine Diagram](./uml/state-machine-diagram.md)
 
+## 📐 Architectural Patterns & Data Modeling
+
+**Domain-Driven Design (DDD) Lite**
+- [Bounded Contexts and Ubiquitous Language](./architecture-data/ddd/bounded-contexts.md)
+- [Entities vs Value Objects](./architecture-data/ddd/entities-vs-value-objects.md)
+- [Aggregates and Aggregate Roots](./architecture-data/ddd/aggregates.md)
+- [Domain Events and Handlers](./architecture-data/ddd/domain-events.md)
+
+**Codebase Architecture**
+- [Layered Architecture (Controller-Service-Repository)](./architecture-data/patterns/layered-architecture.md)
+- [Hexagonal / Clean Architecture](./architecture-data/patterns/hexagonal-architecture.md)
+- [CQRS (Command Query Responsibility Segregation)](./architecture-data/patterns/cqrs.md)
+
+**Database & Data Modeling**
+- [Translating Class Diagrams to Entity-Relationship (ER) Diagrams](./architecture-data/modeling/classes-to-er-diagrams.md)
+- [Choosing Storage: SQL vs NoSQL at the Component Level](./architecture-data/modeling/sql-vs-nosql.md)
+- [Immutability in Data Models (Event Sourcing & Audit Logs)](./architecture-data/modeling/immutability-and-event-sourcing.md)
+- [Data Mapping Patterns (Active Record vs Data Mapper)](./architecture-data/modeling/active-record-vs-data-mapper.md)
+
 ## ⏱️ Concurrency & Multi-threading Concepts
 
 **Concurrency 101**
@@ -63,6 +85,7 @@ reinvented here — GoF categorization is correct and worth keeping).
 - [Processes vs Threads](./concurrency/processes-vs-threads.md)
 - [Thread Lifecycle and States](./concurrency/thread-lifecycle.md)
 - [Race Conditions and Critical Sections](./concurrency/race-conditions.md)
+- [Memory Models and the Volatile Keyword](./concurrency/memory-models-and-volatile.md)
 
 **Synchronization Primitives**
 - [Mutex](./concurrency/mutex.md)
@@ -72,10 +95,12 @@ reinvented here — GoF categorization is correct and worth keeping).
 - [Reentrant Locks](./concurrency/reentrant-locks.md)
 - [Try-Lock and Timed Locking](./concurrency/try-lock-and-timed-locking.md)
 - [Compare-and-Swap (CAS)](./concurrency/compare-and-swap.md)
+- [Optimistic vs Pessimistic Locking](./concurrency/optimistic-vs-pessimistic-locking.md)
 
 **Concurrency Challenges**
 - [Deadlock](./concurrency/deadlock.md)
 - [Livelock](./concurrency/livelock.md)
+- [Thread Starvation and Resource Leaks](./concurrency/starvation-and-leaks.md)
 
 **Concurrency Patterns**
 - [Signaling Pattern](./concurrency/signaling-pattern.md)
@@ -114,14 +139,17 @@ reinvented here — GoF categorization is correct and worth keeping).
 - [Design a Ride-Sharing Service like Uber](./problems/hard/ride-sharing-service.md)
 - [Design Movie Ticket Booking System](./problems/hard/movie-ticket-booking.md)
 - [Design an Online Stock Brokerage System](./problems/hard/online-stock-brokerage.md) — real depth here, fintech background
+- [Design a File System](./problems/hard/file-system.md)
 
-## ⏱️ Concurrency & Multi-threading Problems
+## 🛠️ Concurrency & Multi-threading Problems
 - [Print FooBar Alternately](./concurrency-problems/print-foobar-alternately.md)
 - [Print Zero Even Odd](./concurrency-problems/print-zero-even-odd.md)
 - [Design Thread-Safe Cache with TTL](./concurrency-problems/thread-safe-cache-with-ttl.md)
 - [Design Concurrent HashMap](./concurrency-problems/concurrent-hashmap.md)
 - [Design Thread-Safe Blocking Queue](./concurrency-problems/thread-safe-blocking-queue.md)
 - [Producer-Consumer with Bounded Buffer](./concurrency-problems/producer-consumer-bounded-buffer.md)
+- [Design a Thread-Safe Token Bucket Rate Limiter](./concurrency-problems/token-bucket-rate-limiter.md)
+- [Design a Concurrent ID Generator](./concurrency-problems/concurrent-id-generator.md)
 
 ## 📇 Related repos in this family
 - [System Design & Architecture](https://github.com/abhibatsa/architecting-software) — high-level design, this repo's natural pairing
@@ -131,6 +159,8 @@ reinvented here — GoF categorization is correct and worth keeping).
 - *Head First Design Patterns*
 - *Clean Code* — Robert C. Martin
 - *Refactoring: Improving the Design of Existing Code* — Martin Fowler
+- *Designing Data-Intensive Applications* — Martin Kleppmann
+- *Effective Java* — Joshua Bloch
 
 ## 🤝 Contributing
 See [CONTRIBUTING.md](./CONTRIBUTING.md). Fork, branch, commit, PR — same
