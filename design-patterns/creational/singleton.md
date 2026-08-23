@@ -1,10 +1,27 @@
 # Singleton
 
-**Status:** 🔜 Not yet published
+**Intent:** ensure a class has exactly one instance, with a global access point.
 
-Part of **Design Patterns — Creational** in this repo's structure — see the
-[root README](../../README.md) for the full index and how this fits in.
+```java
+class ConfigManager {
+    private static final ConfigManager INSTANCE = new ConfigManager();
+    private ConfigManager() {}
+    static ConfigManager getInstance() { return INSTANCE; }
+}
+```
 
-*(Placeholder. Final content follows the repo's standard format: what it
-is, when it matters in practice, a real example, common mistakes, and a
-Best Practices section.)*
+## When to use
+Shared resources where multiple instances would cause bugs or waste —
+connection pools, config managers, logging.
+
+## When NOT to use
+It's the most overused pattern in interviews. If you don't have a real
+"exactly one, globally" requirement, don't reach for it — it also makes
+unit testing harder (global mutable state) and hides dependencies.
+
+**Gotcha to mention out loud:** naive singletons aren't thread-safe under
+lazy initialization — mention double-checked locking or eager
+initialization (as above) if concurrency comes up.
+
+---
+*Part of [LLD & OOD Interview Prep](../../../README.md)*

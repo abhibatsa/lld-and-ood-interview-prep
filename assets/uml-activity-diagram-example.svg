@@ -1,0 +1,42 @@
+<svg width="480" height="420" viewBox="0 0 480 420" xmlns="http://www.w3.org/2000/svg" role="img">
+<title>UML activity diagram example</title>
+<desc>Shows an activity diagram for an order approval workflow: start, submit order, a decision diamond checking if amount is under a threshold, branching to auto-approve or manager review, then converging to end.</desc>
+<style>
+text{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;fill:#E6E6E6;}
+.lbl{font-size:11px;font-weight:600;fill:#F5F5F5;}
+.act{fill:#241E3D;stroke:#8C7DE0;stroke-width:1;}
+.dec{fill:#3A2A10;stroke:#E0A33D;stroke-width:1;}
+line{stroke:#9CA3AF;stroke-width:1.3;marker-end:url(#a);}
+</style>
+<defs><marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="#9CA3AF" stroke-width="1.5"/></marker></defs>
+<rect x="0" y="0" width="480" height="420" fill="#0D1117"/>
+
+<circle cx="240" cy="30" r="12" fill="#4CAF8C"/>
+<line x1="240" y1="42" x2="240" y2="70"/>
+
+<rect class="act" x="170" y="70" width="140" height="40" rx="20"/>
+<text class="lbl" x="240" y="94" text-anchor="middle" font-size="10.5">Submit Order</text>
+<line x1="240" y1="110" x2="240" y2="140"/>
+
+<rect class="dec" x="195" y="140" width="90" height="90" transform="rotate(45 240 185)"/>
+<text class="lbl" x="240" y="185" text-anchor="middle" font-size="9.5">amount &lt; $500?</text>
+
+<line x1="195" y1="185" x2="100" y2="185"/>
+<text class="lbl" x="130" y="175" font-size="10">yes</text>
+<rect class="act" x="20" y="185" width="140" height="40" rx="20"/>
+<text class="lbl" x="90" y="209" text-anchor="middle" font-size="10">Auto-Approve</text>
+
+<line x1="285" y1="185" x2="380" y2="185"/>
+<text class="lbl" x="330" y="175" font-size="10">no</text>
+<rect class="act" x="320" y="185" width="140" height="40" rx="20"/>
+<text class="lbl" x="390" y="209" text-anchor="middle" font-size="9.5">Manager Review</text>
+
+<line x1="90" y1="225" x2="90" y2="320" />
+<line x1="90" y1="320" x2="230" y2="320"/>
+<line x1="390" y1="225" x2="390" y2="320"/>
+<line x1="390" y1="320" x2="250" y2="320"/>
+
+<circle cx="240" cy="330" r="14" fill="none" stroke="#D97070" stroke-width="2"/>
+<circle cx="240" cy="330" r="7" fill="#D97070"/>
+<text class="lbl" x="240" y="365" text-anchor="middle">End</text>
+</svg>

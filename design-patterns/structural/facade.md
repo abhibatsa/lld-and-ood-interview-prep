@@ -1,10 +1,25 @@
 # Facade
 
-**Status:** 🔜 Not yet published
+**Intent:** provide a simplified, unified interface to a complex subsystem
+of classes.
 
-Part of **Design Patterns — Structural** in this repo's structure — see the
-[root README](../../README.md) for the full index and how this fits in.
+```java
+class OrderFacade {
+    InventoryService inventory; PaymentService payment; ShippingService shipping;
+    void placeOrder(Order o) { // hides the orchestration complexity
+        inventory.reserve(o); payment.charge(o); shipping.schedule(o);
+    }
+}
+```
 
-*(Placeholder. Final content follows the repo's standard format: what it
-is, when it matters in practice, a real example, common mistakes, and a
-Best Practices section.)*
+## When to use
+Whenever a client would otherwise need to coordinate many subsystem
+classes directly — Facade doesn't add new capability, it hides complexity
+behind one clean entry point.
+
+**Gotcha to mention:** Facade doesn't prevent direct access to the
+subsystem if needed — it's a convenience layer, not a hard boundary
+(that's closer to what Hexagonal Architecture does at a bigger scale).
+
+---
+*Part of [LLD & OOD Interview Prep](../../../README.md)*

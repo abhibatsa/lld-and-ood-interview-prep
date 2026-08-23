@@ -1,10 +1,22 @@
 # Iterator
 
-**Status:** 🔜 Not yet published
+**Intent:** provide a way to access elements of a collection sequentially
+without exposing its underlying representation.
 
-Part of **Design Patterns — Behavioral** in this repo's structure — see the
-[root README](../../README.md) for the full index and how this fits in.
+```java
+Iterator<Order> it = orderList.iterator();
+while (it.hasNext()) { Order o = it.next(); }
+```
 
-*(Placeholder. Final content follows the repo's standard format: what it
-is, when it matters in practice, a real example, common mistakes, and a
-Best Practices section.)*
+## When to use
+Basically always available for free in modern languages (`for-each`,
+`Iterable`) — worth naming explicitly when designing a *custom* collection
+type (e.g., a tree structure, a paginated result set) that needs its own
+traversal logic.
+
+**Gotcha to mention:** the win is decoupling traversal logic from the
+collection's internal structure — callers don't need to know if it's an
+array, linked list, or tree underneath.
+
+---
+*Part of [LLD & OOD Interview Prep](../../../README.md)*

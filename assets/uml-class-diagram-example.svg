@@ -1,0 +1,53 @@
+<svg width="640" height="320" viewBox="0 0 640 320" xmlns="http://www.w3.org/2000/svg" role="img">
+<title>UML class diagram example</title>
+<desc>Shows a class diagram for an order system: an Order class composed of OrderItems, associated with a Customer, and a Payment interface implemented by CreditCardPayment.</desc>
+<defs><marker id="tri" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1L11 6L1 11Z" fill="#0D1117" stroke="#9CA3AF" stroke-width="1"/></marker>
+<marker id="diaF" viewBox="0 0 16 10" refX="14" refY="5" markerWidth="14" markerHeight="9" orient="auto-start-reverse"><path d="M1 5L8 1L15 5L8 9Z" fill="#D97070"/></marker></defs>
+<style>
+text{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;fill:#E6E6E6;}
+.cn{font-size:12px;font-weight:700;fill:#F5F5F5;}
+.cm{font-size:10px;fill:#C9C9C9;}
+.box{fill:#241E3D;stroke:#8C7DE0;stroke-width:1;}
+line{stroke:#9CA3AF;stroke-width:1.3;}
+</style>
+<rect x="0" y="0" width="640" height="320" fill="#0D1117"/>
+
+<rect class="box" x="230" y="30" width="170" height="90" rx="4"/>
+<text class="cn" x="315" y="48" text-anchor="middle">Order</text>
+<line x1="230" y1="55" x2="400" y2="55" stroke="#8C7DE0"/>
+<text class="cm" x="238" y="70">- id: String</text>
+<text class="cm" x="238" y="84">- status: OrderStatus</text>
+<text class="cm" x="238" y="98">+ calculateTotal(): double</text>
+<text class="cm" x="238" y="112">+ addItem(item)</text>
+
+<rect class="box" x="20" y="180" width="150" height="60" rx="4"/>
+<text class="cn" x="95" y="200" text-anchor="middle">OrderItem</text>
+<line x1="20" y1="207" x2="170" y2="207" stroke="#8C7DE0"/>
+<text class="cm" x="28" y="222">- sku: String</text>
+<text class="cm" x="28" y="234">- qty: int</text>
+
+<line x1="230" y1="120" x2="95" y2="180" marker-start="url(#diaF)"/>
+<text class="cm" x="150" y="150">composition</text>
+
+<rect class="box" x="230" y="180" width="150" height="60" rx="4"/>
+<text class="cn" x="305" y="200" text-anchor="middle">Customer</text>
+<line x1="230" y1="207" x2="380" y2="207" stroke="#8C7DE0"/>
+<text class="cm" x="238" y="222">- name: String</text>
+<text class="cm" x="238" y="234">- email: String</text>
+
+<line x1="315" y1="120" x2="305" y2="180"/>
+<text class="cm" x="330" y="150">association</text>
+
+<rect class="box" x="450" y="180" width="150" height="50" rx="4"/>
+<text class="cn" x="525" y="200" text-anchor="middle">«interface»</text>
+<text class="cn" x="525" y="215" text-anchor="middle">Payment</text>
+
+<rect class="box" x="450" y="270" width="150" height="40" rx="4"/>
+<text class="cn" x="525" y="294" text-anchor="middle" font-size="11">CreditCardPayment</text>
+
+<line x1="525" y1="270" x2="525" y2="230" marker-end="url(#tri)"/>
+<text class="cm" x="560" y="255" text-anchor="middle">implements</text>
+
+<line x1="400" y1="90" x2="450" y2="200" stroke-dasharray="3,3"/>
+<text class="cm" x="410" y="150">uses</text>
+</svg>

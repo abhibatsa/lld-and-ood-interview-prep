@@ -1,0 +1,50 @@
+<svg width="740" height="260" viewBox="0 0 740 260" xmlns="http://www.w3.org/2000/svg" role="img">
+<title>Structural patterns overview</title>
+<desc>Shows the seven structural design patterns with one-line purpose each: Adapter converts an interface, Bridge splits abstraction from implementation, Composite treats trees uniformly, Decorator adds behavior dynamically, Facade simplifies a subsystem, Flyweight shares memory, and Proxy controls access.</desc>
+<style>
+text{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;fill:#E6E6E6;}
+.name{font-size:12px;font-weight:600;fill:#F5F5F5;}
+.desc{font-size:9.5px;fill:#C9C9C9;}
+.box{fill:#173829;stroke:#4CAF8C;stroke-width:1;}
+</style>
+<rect x="0" y="0" width="740" height="260" fill="#0D1117"/>
+<text class="name" x="370" y="26" text-anchor="middle" font-size="14">Structural — composing classes and objects into larger structures</text>
+
+<rect class="box" x="15" y="50" width="98" height="90" rx="8"/>
+<text class="name" x="64" y="72" text-anchor="middle">Adapter</text>
+<text class="desc" x="64" y="95" text-anchor="middle">converts an</text>
+<text class="desc" x="64" y="108" text-anchor="middle">interface</text>
+
+<rect class="box" x="122" y="50" width="98" height="90" rx="8"/>
+<text class="name" x="171" y="72" text-anchor="middle">Bridge</text>
+<text class="desc" x="171" y="95" text-anchor="middle">splits abstraction</text>
+<text class="desc" x="171" y="108" text-anchor="middle">from impl</text>
+
+<rect class="box" x="229" y="50" width="98" height="90" rx="8"/>
+<text class="name" x="278" y="72" text-anchor="middle">Composite</text>
+<text class="desc" x="278" y="95" text-anchor="middle">treats trees</text>
+<text class="desc" x="278" y="108" text-anchor="middle">uniformly</text>
+
+<rect class="box" x="336" y="50" width="98" height="90" rx="8"/>
+<text class="name" x="385" y="72" text-anchor="middle">Decorator</text>
+<text class="desc" x="385" y="95" text-anchor="middle">adds behavior</text>
+<text class="desc" x="385" y="108" text-anchor="middle">dynamically</text>
+
+<rect class="box" x="443" y="50" width="98" height="90" rx="8"/>
+<text class="name" x="492" y="72" text-anchor="middle">Facade</text>
+<text class="desc" x="492" y="95" text-anchor="middle">simplifies a</text>
+<text class="desc" x="492" y="108" text-anchor="middle">subsystem</text>
+
+<rect class="box" x="550" y="50" width="90" height="90" rx="8"/>
+<text class="name" x="595" y="72" text-anchor="middle" font-size="11">Flyweight</text>
+<text class="desc" x="595" y="95" text-anchor="middle">shares memory</text>
+<text class="desc" x="595" y="108" text-anchor="middle">across instances</text>
+
+<rect class="box" x="650" y="50" width="80" height="90" rx="8"/>
+<text class="name" x="690" y="72" text-anchor="middle" font-size="11">Proxy</text>
+<text class="desc" x="690" y="95" text-anchor="middle">controls</text>
+<text class="desc" x="690" y="108" text-anchor="middle">access</text>
+
+<text class="desc" x="370" y="175" text-anchor="middle" font-size="11">Decorator vs Proxy: same shape (wrap behind the same interface), different intent —</text>
+<text class="desc" x="370" y="192" text-anchor="middle" font-size="11">Decorator adds behavior, Proxy controls access. Say this distinction out loud if asked to compare.</text>
+</svg>

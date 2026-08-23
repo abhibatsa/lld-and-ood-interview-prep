@@ -1,0 +1,55 @@
+<svg width="760" height="300" viewBox="0 0 760 300" xmlns="http://www.w3.org/2000/svg" role="img">
+<title>Behavioral patterns overview</title>
+<desc>Shows the ten behavioral design patterns arranged in a grid with one-line purpose each, covering how objects communicate and distribute responsibility: Iterator, Observer, Strategy, Command, State, Template Method, Visitor, Mediator, Memento, and Chain of Responsibility.</desc>
+<style>
+text{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;fill:#E6E6E6;}
+.name{font-size:11.5px;font-weight:600;fill:#F5F5F5;}
+.desc{font-size:9px;fill:#C9C9C9;}
+.box{fill:#3A2A10;stroke:#E0A33D;stroke-width:1;}
+</style>
+<rect x="0" y="0" width="760" height="300" fill="#0D1117"/>
+<text class="name" x="380" y="24" text-anchor="middle" font-size="14">Behavioral — how objects communicate and share responsibility</text>
+
+<rect class="box" x="15" y="45" width="140" height="66" rx="8"/>
+<text class="name" x="85" y="65" text-anchor="middle">Iterator</text>
+<text class="desc" x="85" y="85" text-anchor="middle">traverse without exposing structure</text>
+
+<rect class="box" x="165" y="45" width="140" height="66" rx="8"/>
+<text class="name" x="235" y="65" text-anchor="middle">Observer</text>
+<text class="desc" x="235" y="85" text-anchor="middle">one-to-many change notification</text>
+
+<rect class="box" x="315" y="45" width="140" height="66" rx="8"/>
+<text class="name" x="385" y="65" text-anchor="middle">Strategy</text>
+<text class="desc" x="385" y="85" text-anchor="middle">swap algorithm at runtime</text>
+
+<rect class="box" x="465" y="45" width="140" height="66" rx="8"/>
+<text class="name" x="535" y="65" text-anchor="middle">Command</text>
+<text class="desc" x="535" y="85" text-anchor="middle">request as an object — undo/queue</text>
+
+<rect class="box" x="615" y="45" width="130" height="66" rx="8"/>
+<text class="name" x="680" y="65" text-anchor="middle">State</text>
+<text class="desc" x="680" y="85" text-anchor="middle">behavior changes with state</text>
+
+<rect class="box" x="15" y="125" width="140" height="66" rx="8"/>
+<text class="name" x="85" y="145" text-anchor="middle" font-size="10.5">Template Method</text>
+<text class="desc" x="85" y="165" text-anchor="middle">fixed skeleton, override one step</text>
+
+<rect class="box" x="165" y="125" width="140" height="66" rx="8"/>
+<text class="name" x="235" y="145" text-anchor="middle">Visitor</text>
+<text class="desc" x="235" y="165" text-anchor="middle">add ops without touching classes</text>
+
+<rect class="box" x="315" y="125" width="140" height="66" rx="8"/>
+<text class="name" x="385" y="145" text-anchor="middle">Mediator</text>
+<text class="desc" x="385" y="165" text-anchor="middle">N² coupling collapsed to N</text>
+
+<rect class="box" x="465" y="125" width="140" height="66" rx="8"/>
+<text class="name" x="535" y="145" text-anchor="middle">Memento</text>
+<text class="desc" x="535" y="165" text-anchor="middle">snapshot state for restore</text>
+
+<rect class="box" x="615" y="125" width="130" height="66" rx="8"/>
+<text class="name" x="680" y="145" text-anchor="middle" font-size="10">Chain of Resp.</text>
+<text class="desc" x="680" y="165" text-anchor="middle">pass along handlers</text>
+
+<text class="desc" x="380" y="230" text-anchor="middle" font-size="11">Highest-ROI to know cold: Strategy, Observer, State, Command — these four cover most real interview prompts.</text>
+<text class="desc" x="380" y="248" text-anchor="middle" font-size="11">Visitor and Mediator are lower-frequency — mention them only when the problem shape genuinely fits.</text>
+</svg>

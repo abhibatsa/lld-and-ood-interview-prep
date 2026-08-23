@@ -1,0 +1,53 @@
+<svg width="740" height="320" viewBox="0 0 740 320" xmlns="http://www.w3.org/2000/svg" role="img">
+<title>Class relationships compared by strength</title>
+<desc>Shows the four class relationships in order of increasing strength: dependency (dashed arrow, temporary use), association (solid arrow, ongoing reference), aggregation (hollow diamond, shared ownership, child can outlive parent), and composition (filled diamond, exclusive ownership, child dies with parent).</desc>
+<defs>
+<marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="#9CA3AF" stroke-width="1.5"/></marker>
+<marker id="diamondHollow" viewBox="0 0 20 12" refX="18" refY="6" markerWidth="16" markerHeight="10" orient="auto-start-reverse"><path d="M1 6L10 1L19 6L10 11Z" fill="#0D1117" stroke="#E0A33D" stroke-width="1.5"/></marker>
+<marker id="diamondFilled" viewBox="0 0 20 12" refX="18" refY="6" markerWidth="16" markerHeight="10" orient="auto-start-reverse"><path d="M1 6L10 1L19 6L10 11Z" fill="#D97070" stroke="#D97070" stroke-width="1.5"/></marker>
+</defs>
+<style>
+text{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;fill:#E6E6E6;}
+.th{font-size:13px;font-weight:600;}
+.ts{font-size:11px;fill:#B4B4B4;}
+.box{fill:#241E3D;stroke:#8C7DE0;stroke-width:1;}
+line{stroke:#9CA3AF;stroke-width:1.5;}
+</style>
+<rect x="0" y="0" width="740" height="320" fill="#0D1117"/>
+<text class="th" x="370" y="24" text-anchor="middle">Increasing strength of ownership →</text>
+
+<rect class="box" x="20" y="50" width="120" height="40" rx="6"/>
+<text class="th" x="80" y="70" text-anchor="middle" dominant-baseline="central">OrderService</text>
+<line x1="140" y1="70" x2="210" y2="70" stroke-dasharray="4,3" marker-end="url(#arrow)"/>
+<rect class="box" x="210" y="50" width="100" height="40" rx="6"/>
+<text class="th" x="260" y="70" text-anchor="middle" dominant-baseline="central">Logger</text>
+<text class="ts" x="165" y="45" text-anchor="middle">dependency</text>
+<text class="ts" x="165" y="105" text-anchor="middle">temporary use, no stored ref</text>
+
+<rect class="box" x="20" y="140" width="120" height="40" rx="6"/>
+<text class="th" x="80" y="160" text-anchor="middle" dominant-baseline="central">Teacher</text>
+<line x1="140" y1="160" x2="210" y2="160" marker-end="url(#arrow)"/>
+<rect class="box" x="210" y="140" width="100" height="40" rx="6"/>
+<text class="th" x="260" y="160" text-anchor="middle" dominant-baseline="central">Student</text>
+<text class="ts" x="165" y="135" text-anchor="middle">association</text>
+<text class="ts" x="165" y="195" text-anchor="middle">ongoing reference, no ownership</text>
+
+<rect class="box" x="420" y="50" width="120" height="40" rx="6"/>
+<text class="th" x="480" y="70" text-anchor="middle" dominant-baseline="central">Department</text>
+<line x1="540" y1="70" x2="610" y2="70" marker-start="url(#diamondHollow)"/>
+<rect class="box" x="610" y="50" width="110" height="40" rx="6"/>
+<text class="th" x="665" y="70" text-anchor="middle" dominant-baseline="central">Professor</text>
+<text class="ts" x="575" y="45" text-anchor="middle">aggregation</text>
+<text class="ts" x="575" y="105" text-anchor="middle">shared — professor outlives dept</text>
+
+<rect class="box" x="420" y="140" width="120" height="40" rx="6"/>
+<text class="th" x="480" y="160" text-anchor="middle" dominant-baseline="central">House</text>
+<line x1="540" y1="160" x2="610" y2="160" marker-start="url(#diamondFilled)"/>
+<rect class="box" x="610" y="140" width="110" height="40" rx="6"/>
+<text class="th" x="665" y="160" text-anchor="middle" dominant-baseline="central">Room</text>
+<text class="ts" x="575" y="135" text-anchor="middle">composition</text>
+<text class="ts" x="575" y="195" text-anchor="middle">exclusive — room dies with house</text>
+
+<text class="ts" x="370" y="250" text-anchor="middle">Dependency (dashed) → Association (solid line) → Aggregation (hollow diamond) → Composition (filled diamond)</text>
+<text class="ts" x="370" y="270" text-anchor="middle">The diamond always sits on the "owner" side of the relationship.</text>
+</svg>

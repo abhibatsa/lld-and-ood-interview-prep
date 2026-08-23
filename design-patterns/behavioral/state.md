@@ -1,10 +1,22 @@
 # State
 
-**Status:** 🔜 Not yet published
+**Intent:** let an object alter its behavior when its internal state
+changes — looks like the object changed class.
 
-Part of **Design Patterns — Behavioral** in this repo's structure — see the
-[root README](../../README.md) for the full index and how this fits in.
+```java
+interface OrderState { void next(Order o); }
+class PlacedState implements OrderState { public void next(Order o) { o.setState(new ConfirmedState()); } }
+```
 
-*(Placeholder. Final content follows the repo's standard format: what it
-is, when it matters in practice, a real example, common mistakes, and a
-Best Practices section.)*
+## When to use
+State machines — order lifecycle, traffic light, media player
+(playing/paused/stopped), connection states. Directly pairs with
+[Enums](../../oop-fundamentals/enums.md) for the state identifiers.
+
+**Gotcha to mention:** without this pattern, state logic tends to become a
+sprawling `if/else` or `switch` on a status field scattered across the
+codebase — State pattern localizes each state's behavior into its own
+class, which is the concrete win to name.
+
+---
+*Part of [LLD & OOD Interview Prep](../../../README.md)*

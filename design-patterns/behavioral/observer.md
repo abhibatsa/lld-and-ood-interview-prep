@@ -1,10 +1,25 @@
 # Observer
 
-**Status:** 🔜 Not yet published
+**Intent:** define a one-to-many dependency so that when one object
+(subject) changes state, all dependents (observers) are notified
+automatically.
 
-Part of **Design Patterns — Behavioral** in this repo's structure — see the
-[root README](../../README.md) for the full index and how this fits in.
+```java
+interface Observer { void update(Event e); }
+class Subject {
+    List<Observer> observers;
+    void notifyAll(Event e) { observers.forEach(o -> o.update(e)); }
+}
+```
 
-*(Placeholder. Final content follows the repo's standard format: what it
-is, when it matters in practice, a real example, common mistakes, and a
-Best Practices section.)*
+## When to use
+Extremely high-frequency interview pattern — Pub/Sub systems, notification
+systems, stock price tickers, event-driven UI updates.
+
+**Gotcha to mention:** naive Observer with synchronous notification can
+block the subject if an observer is slow — mention async notification
+(queue/event bus) as a production-grade improvement if the interviewer
+pushes on scale.
+
+---
+*Part of [LLD & OOD Interview Prep](../../../README.md)*

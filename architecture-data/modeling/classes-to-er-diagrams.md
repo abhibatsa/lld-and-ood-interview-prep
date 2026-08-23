@@ -1,10 +1,29 @@
-# Classes to ER Diagrams
+# Translating Class Diagrams to Entity-Relationship (ER) Diagrams
 
-**Status:** 🔜 Not yet published
+Almost every modern LLD interview expects you to sketch the underlying
+schema, not just classes — this is the fast mental translation.
 
-Part of **Architectural Patterns & Data Modeling — Database & Data Modeling** in this repo's structure — see the
-[root README](../../README.md) for the full index and how this fits in.
+```
+Class diagram:              →   ER diagram:
+Order 1---* OrderItem           orders(id PK, customer_id FK, status)
+Order *---1 Customer            order_items(id PK, order_id FK, sku, qty)
+                                 customers(id PK, name, email)
+```
 
-*(Placeholder. Final content follows the repo's standard format: what it
-is, when it matters in practice, a real example, common mistakes, and a
-Best Practices section.)*
+## The translation rules
+- **Composition/Aggregation → foreign key** on the "many" side, pointing
+  back to the "one" side
+- **Association → foreign key** on either side, or a join table if
+  many-to-many
+- **Class attributes → table columns**, with types
+- **Inheritance → three options**: single table (one table, nullable
+  columns per subtype), class-table (one table per class, joined), or
+  concrete-table (one table per concrete subclass) — mention the trade-off
+  (simplicity vs normalization) if it comes up
+
+**Remember:** draw this *after* your class diagram, not instead of it —
+in interviews, showing you can go from OOP model to relational schema in
+under a minute is a strong, fast signal.
+
+---
+*Part of [LLD & OOD Interview Prep](../../../README.md)*

@@ -1,10 +1,28 @@
-# Bounded Contexts
+# Bounded Contexts and Ubiquitous Language
 
-**Status:** 🔜 Not yet published
+**Bounded Context:** a explicit boundary within which a domain model is
+defined and consistent — the same word can mean different things in
+different contexts, and that's fine.
 
-Part of **Architectural Patterns & Data Modeling — DDD Lite** in this repo's structure — see the
-[root README](../../README.md) for the full index and how this fits in.
+```
+"Customer" in the Sales context: has a sales rep, a discount tier
+"Customer" in the Support context: has a ticket history, an SLA tier
+```
 
-*(Placeholder. Final content follows the repo's standard format: what it
-is, when it matters in practice, a real example, common mistakes, and a
-Best Practices section.)*
+![DDD building blocks](../../assets/ddd-building-blocks.svg)
+
+## Key points
+- **Ubiquitous Language:** the shared vocabulary between engineers and
+  domain experts, used consistently *within* one bounded context —
+  reduces translation errors between "what the business says" and "what
+  the code says"
+- Large interview problems (Uber, Splitwise, a marketplace) often
+  implicitly span multiple bounded contexts (Booking vs Payments vs
+  Ratings) — naming this explicitly is a strong senior-level signal
+
+**Remember:** don't force one giant unified model across a whole system —
+say "I'd treat Payments and Booking as separate bounded contexts with
+their own Order concept" if the problem is big enough to warrant it.
+
+---
+*Part of [LLD & OOD Interview Prep](../../../README.md)*

@@ -1,0 +1,48 @@
+<svg width="740" height="380" viewBox="0 0 740 380" xmlns="http://www.w3.org/2000/svg" role="img">
+<title>SOLID principles overview</title>
+<desc>Shows the five SOLID principles as a vertical stack: Single Responsibility, Open/Closed, Liskov Substitution, Interface Segregation, and Dependency Inversion, each with a one-line description.</desc>
+<style>
+text{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;fill:#E6E6E6;}
+.letter{font-size:22px;font-weight:700;fill:#F5F5F5;}
+.name{font-size:14px;font-weight:600;fill:#F5F5F5;}
+.desc{font-size:12px;fill:#C9C9C9;}
+.box{stroke-width:1;}
+</style>
+<rect x="0" y="0" width="740" height="380" fill="#0D1117"/>
+<text class="name" x="370" y="26" text-anchor="middle" font-size="15">SOLID — five principles, one line each</text>
+
+<g>
+<rect class="box" x="20" y="45" width="56" height="56" rx="10" fill="#241E3D" stroke="#8C7DE0"/>
+<text class="letter" x="48" y="73" text-anchor="middle" dominant-baseline="central">S</text>
+<text class="name" x="90" y="62">Single Responsibility</text>
+<text class="desc" x="90" y="82">A class should have exactly one reason to change</text>
+</g>
+
+<g>
+<rect class="box" x="20" y="112" width="56" height="56" rx="10" fill="#173829" stroke="#4CAF8C"/>
+<text class="letter" x="48" y="140" text-anchor="middle" dominant-baseline="central">O</text>
+<text class="name" x="90" y="129">Open/Closed</text>
+<text class="desc" x="90" y="149">Open for extension, closed for modification</text>
+</g>
+
+<g>
+<rect class="box" x="20" y="179" width="56" height="56" rx="10" fill="#3A2A10" stroke="#E0A33D"/>
+<text class="letter" x="48" y="207" text-anchor="middle" dominant-baseline="central">L</text>
+<text class="name" x="90" y="196">Liskov Substitution</text>
+<text class="desc" x="90" y="216">A subclass must be usable anywhere its parent is</text>
+</g>
+
+<g>
+<rect class="box" x="20" y="246" width="56" height="56" rx="10" fill="#3A1E1E" stroke="#D97070"/>
+<text class="letter" x="48" y="274" text-anchor="middle" dominant-baseline="central">I</text>
+<text class="name" x="90" y="263">Interface Segregation</text>
+<text class="desc" x="90" y="283">Many small, specific interfaces beat one large one</text>
+</g>
+
+<g>
+<rect class="box" x="20" y="313" width="56" height="56" rx="10" fill="#241E3D" stroke="#8C7DE0"/>
+<text class="letter" x="48" y="341" text-anchor="middle" dominant-baseline="central">D</text>
+<text class="name" x="90" y="330">Dependency Inversion</text>
+<text class="desc" x="90" y="350">Depend on abstractions, not concrete classes</text>
+</g>
+</svg>

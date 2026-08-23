@@ -1,0 +1,46 @@
+<svg width="600" height="300" viewBox="0 0 600 300" xmlns="http://www.w3.org/2000/svg" role="img">
+<title>UML use case diagram example</title>
+<desc>Shows a use case diagram for an online ordering system with a Customer actor connected to Browse Products, Place Order, and Track Order use cases, and an Admin actor connected to Manage Inventory.</desc>
+<style>
+text{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;fill:#E6E6E6;}
+.lbl{font-size:11px;font-weight:600;fill:#F5F5F5;}
+.oval{fill:#173829;stroke:#4CAF8C;stroke-width:1;}
+.actor{fill:none;stroke:#E0A33D;stroke-width:1.5;}
+line{stroke:#9CA3AF;stroke-width:1.2;}
+</style>
+<rect x="0" y="0" width="600" height="300" fill="#0D1117"/>
+<text class="lbl" x="300" y="24" text-anchor="middle" font-size="13">Actors interact with use cases (system boundary in the middle)</text>
+
+<!-- Customer actor stick figure -->
+<circle class="actor" cx="60" cy="80" r="12"/>
+<line class="actor" x1="60" y1="92" x2="60" y2="130"/>
+<line class="actor" x1="40" y1="105" x2="80" y2="105"/>
+<line class="actor" x1="60" y1="130" x2="42" y2="155"/>
+<line class="actor" x1="60" y1="130" x2="78" y2="155"/>
+<text class="lbl" x="60" y="172" text-anchor="middle">Customer</text>
+
+<rect x="180" y="55" width="150" height="40" rx="20" class="oval"/>
+<text class="lbl" x="255" y="79" text-anchor="middle" font-size="10.5">Browse Products</text>
+<line x1="80" y1="90" x2="180" y2="75"/>
+
+<rect x="180" y="115" width="150" height="40" rx="20" class="oval"/>
+<text class="lbl" x="255" y="139" text-anchor="middle" font-size="10.5">Place Order</text>
+<line x1="80" y1="105" x2="180" y2="135"/>
+
+<rect x="180" y="175" width="150" height="40" rx="20" class="oval"/>
+<text class="lbl" x="255" y="199" text-anchor="middle" font-size="10.5">Track Order</text>
+<line x1="80" y1="115" x2="180" y2="195"/>
+
+<!-- Admin actor -->
+<circle class="actor" cx="530" cy="200" r="12"/>
+<line class="actor" x1="530" y1="212" x2="530" y2="250"/>
+<line class="actor" x1="510" y1="225" x2="550" y2="225"/>
+<line class="actor" x1="530" y1="250" x2="512" y2="275"/>
+<line class="actor" x1="530" y1="250" x2="548" y2="275"/>
+<text class="lbl" x="530" y="292" text-anchor="middle">Admin</text>
+
+<rect x="360" y="180" width="150" height="40" rx="20" class="oval"/>
+<text class="lbl" x="435" y="204" text-anchor="middle" font-size="10.5">Manage Inventory</text>
+<line x1="510" y1="205" x2="510" y2="200"/>
+<line x1="518" y1="205" x2="460" y2="200"/>
+</svg>

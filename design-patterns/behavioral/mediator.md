@@ -1,10 +1,23 @@
 # Mediator
 
-**Status:** 🔜 Not yet published
+**Intent:** define an object that encapsulates how a set of objects
+interact, avoiding direct references between them (reduces many-to-many
+coupling to many-to-one).
 
-Part of **Design Patterns — Behavioral** in this repo's structure — see the
-[root README](../../README.md) for the full index and how this fits in.
+```java
+class ChatRoomMediator {
+    void sendMessage(String msg, User from) { /* routes to all other users */ }
+}
+class User { ChatRoomMediator mediator; void send(String msg) { mediator.sendMessage(msg, this); } }
+```
 
-*(Placeholder. Final content follows the repo's standard format: what it
-is, when it matters in practice, a real example, common mistakes, and a
-Best Practices section.)*
+## When to use
+Complex many-to-many communication between objects — chat rooms, air
+traffic control, UI form validation with many interdependent fields.
+
+**Gotcha to mention:** without Mediator, N objects that all need to talk
+to each other create O(N²) direct relationships; Mediator collapses that
+to O(N) — that's the concrete complexity argument to make.
+
+---
+*Part of [LLD & OOD Interview Prep](../../../README.md)*

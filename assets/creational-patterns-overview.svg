@@ -1,0 +1,40 @@
+<svg width="700" height="260" viewBox="0 0 700 260" xmlns="http://www.w3.org/2000/svg" role="img">
+<title>Creational patterns overview</title>
+<desc>Shows the five creational design patterns arranged with one-line purpose each: Singleton (one instance), Factory Method (one product via inheritance), Abstract Factory (product families via composition), Builder (step by step construction), and Prototype (clone existing instance).</desc>
+<style>
+text{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;fill:#E6E6E6;}
+.name{font-size:13px;font-weight:600;fill:#F5F5F5;}
+.desc{font-size:10px;fill:#C9C9C9;}
+.box{fill:#241E3D;stroke:#8C7DE0;stroke-width:1;}
+</style>
+<rect x="0" y="0" width="700" height="260" fill="#0D1117"/>
+<text class="name" x="350" y="26" text-anchor="middle" font-size="14">Creational — controlling how objects get made</text>
+
+<rect class="box" x="20" y="55" width="130" height="80" rx="8"/>
+<text class="name" x="85" y="80" text-anchor="middle">Singleton</text>
+<text class="desc" x="85" y="105" text-anchor="middle">exactly</text>
+<text class="desc" x="85" y="118" text-anchor="middle">one instance</text>
+
+<rect class="box" x="165" y="55" width="130" height="80" rx="8"/>
+<text class="name" x="230" y="80" text-anchor="middle">Factory Method</text>
+<text class="desc" x="230" y="105" text-anchor="middle">one product,</text>
+<text class="desc" x="230" y="118" text-anchor="middle">via inheritance</text>
+
+<rect class="box" x="310" y="55" width="130" height="80" rx="8"/>
+<text class="name" x="375" y="80" text-anchor="middle">Abstract Factory</text>
+<text class="desc" x="375" y="105" text-anchor="middle">product families,</text>
+<text class="desc" x="375" y="118" text-anchor="middle">via composition</text>
+
+<rect class="box" x="455" y="55" width="130" height="80" rx="8"/>
+<text class="name" x="520" y="80" text-anchor="middle">Builder</text>
+<text class="desc" x="520" y="105" text-anchor="middle">step-by-step</text>
+<text class="desc" x="520" y="118" text-anchor="middle">construction</text>
+
+<rect class="box" x="600" y="55" width="80" height="80" rx="8"/>
+<text class="name" x="640" y="80" text-anchor="middle" font-size="12">Prototype</text>
+<text class="desc" x="640" y="105" text-anchor="middle">clone an</text>
+<text class="desc" x="640" y="118" text-anchor="middle">existing instance</text>
+
+<text class="desc" x="350" y="175" text-anchor="middle">Ask: "am I creating one thing, one type of thing, a family of related things, a complex thing</text>
+<text class="desc" x="350" y="193" text-anchor="middle">step by step, or copying something expensive to rebuild?" — that question picks the pattern.</text>
+</svg>

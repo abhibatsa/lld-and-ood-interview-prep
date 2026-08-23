@@ -1,10 +1,24 @@
 # Flyweight
 
-**Status:** 🔜 Not yet published
+**Intent:** minimize memory use by sharing as much data as possible
+between similar objects, separating intrinsic (shared) from extrinsic
+(per-instance) state.
 
-Part of **Design Patterns — Structural** in this repo's structure — see the
-[root README](../../README.md) for the full index and how this fits in.
+```java
+class CharacterGlyph { char symbol; Font font; } // intrinsic — shared across all uses
+// extrinsic state (position on screen) is passed in at render time, not stored per glyph
+```
 
-*(Placeholder. Final content follows the repo's standard format: what it
-is, when it matters in practice, a real example, common mistakes, and a
-Best Practices section.)*
+## When to use
+Massive numbers of similar objects where per-object memory matters — text
+rendering (millions of character glyphs), game particle systems, map tile
+rendering.
+
+**Gotcha to mention:** this is a real interview pattern for "design a text
+editor" or similar high-volume-object problems — the key insight to
+verbalize is separating what's *shared* (font, glyph shape) from what's
+*per-instance* (position), and only storing the per-instance part
+separately.
+
+---
+*Part of [LLD & OOD Interview Prep](../../../README.md)*
