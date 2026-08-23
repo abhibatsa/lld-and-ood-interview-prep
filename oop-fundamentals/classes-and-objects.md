@@ -12,14 +12,12 @@ class Car {
 }
 Car myCar = new Car("Model 3"); // object
 ```
-![Classes & Objects Car Example](../../assets/classes-objects-car-example.png)
 
 ## Key points
 - A class defines *shape*; an object is *memory allocated to that shape*
 - Multiple objects of the same class share method code, not state
 - In an interview, naming your classes well (nouns from the requirements) is itself a signal of clear thinking
 
-![Classes & Objects Car Example](../../assets/classes-objects-cookies-example.png)
 
 **Remember:** if you're struggling to name a class, it's often a sign the
 responsibility itself is unclear — fix the design, not the name.
