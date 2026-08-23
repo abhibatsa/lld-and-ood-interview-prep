@@ -1,6 +1,7 @@
 # Classes and Objects
 
 **Class** — a blueprint defining state (fields) and behavior (methods).
+
 **Object** — a runtime instance of a class, with its own copy of state.
 
 ```java
