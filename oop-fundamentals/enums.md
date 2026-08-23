@@ -1,10 +1,19 @@
 # Enums
 
-**Status:** 🔜 Not yet published
+A fixed, type-safe set of named constants. Underused in interviews —
+reach for an enum instead of a `String status` or magic `int` every time.
 
-Part of **OOP Fundamentals** in this repo's structure — see the
-[root README](../README.md) for the full index and how this fits in.
+```java
+enum OrderStatus { PLACED, CONFIRMED, SHIPPED, DELIVERED, CANCELLED }
+```
 
-*(Placeholder. Final content follows the repo's standard format: what it
-is, when it matters in practice, a real example, common mistakes, and a
-Best Practices section.)*
+## Key points
+- Enums can have fields, constructors, and methods in Java — not just labels
+- Great for **state machines** (order status, traffic light state) — pairs directly with the [State pattern](../design-patterns/behavioral/state.md)
+- Prevents invalid values at compile time — `"Shiped"` (typo) can't happen with an enum, it can with a string
+
+**Remember:** if an interviewer sees you use `String` for a fixed set of
+states, that's a small but real signal — use an enum instead.
+
+---
+*Part of [LLD & OOD Interview Prep](../../README.md)*

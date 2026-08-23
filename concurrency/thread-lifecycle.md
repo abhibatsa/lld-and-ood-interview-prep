@@ -1,10 +1,26 @@
-# Thread Lifecycle
+# Thread Lifecycle and States
 
-**Status:** 🔜 Not yet published
+A thread moves through a defined set of states from creation to
+completion.
 
-Part of **Concurrency 101** in this repo's structure — see the
-[root README](../README.md) for the full index and how this fits in.
+![Thread lifecycle](../assets/thread-lifecycle.svg)
 
-*(Placeholder. Final content follows the repo's standard format: what it
-is, when it matters in practice, a real example, common mistakes, and a
-Best Practices section.)*
+## The states
+- **New** — created, not yet started
+- **Runnable** — eligible to run, waiting for CPU time
+- **Running** — actively executing
+- **Blocked/Waiting** — paused, waiting on a lock, I/O, or another thread
+- **Terminated** — finished execution
+
+## Key points
+- A thread can bounce between Runnable and Blocked many times before
+  reaching Terminated — this is normal, not a bug
+- Understanding this lifecycle is the foundation for debugging deadlocks
+  (threads stuck in Blocked forever) and starvation (threads stuck cycling
+  Runnable→Blocked without ever getting real CPU time)
+
+**Remember:** if asked to debug a "hung" thread, the first question is
+always "what state is it in, and what's it blocked on?"
+
+---
+*Part of [LLD & OOD Interview Prep](../../README.md)*

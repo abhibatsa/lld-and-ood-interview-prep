@@ -1,10 +1,24 @@
-# Compare and Swap
+# Compare-and-Swap (CAS)
 
-**Status:** 🔜 Not yet published
+An atomic CPU-level operation: "update this value to X, but only if it
+currently equals the expected old value." If another thread changed it in
+between, the operation fails and can be retried — no lock needed.
 
-Part of **Synchronization Primitives** in this repo's structure — see the
-[root README](../README.md) for the full index and how this fits in.
+```java
+AtomicInteger counter = new AtomicInteger(0);
+counter.incrementAndGet(); // implemented internally via CAS, no mutex
+```
 
-*(Placeholder. Final content follows the repo's standard format: what it
-is, when it matters in practice, a real example, common mistakes, and a
-Best Practices section.)*
+## Key points
+- The foundation of **lock-free** programming — avoids the overhead of
+  blocking/context-switching that mutexes incur
+- The typical pattern: read current value → compute new value → CAS it in
+  → if it fails (someone else changed it first), retry the whole loop
+
+**Remember:** "CAS gives you atomic updates without blocking — it's why
+`AtomicInteger`/`AtomicReference` don't need a mutex internally." A strong
+answer for the [Concurrent ID Generator](../concurrency-problems/concurrent-id-generator.md)
+problem specifically.
+
+---
+*Part of [LLD & OOD Interview Prep](../../README.md)*

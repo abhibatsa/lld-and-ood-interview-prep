@@ -1,10 +1,29 @@
-# Law of Demeter
+# Law of Demeter (Principle of Least Knowledge)
 
-**Status:** 🔜 Not yet published
+Only talk to your immediate friends — a method should only call methods
+on: itself, its own fields, its parameters, or objects it directly
+creates. Not on objects returned by those.
 
-Part of **Design Principles** in this repo's structure — see the
-[root README](../README.md) for the full index and how this fits in.
+```java
+// Violation: reaching through multiple objects ("train wreck")
+order.getCustomer().getAddress().getCity();
 
-*(Placeholder. Final content follows the repo's standard format: what it
-is, when it matters in practice, a real example, common mistakes, and a
-Best Practices section.)*
+// Better: ask the order directly, let it delegate internally
+order.getCustomerCity();
+```
+
+## Key points
+- The giveaway is a chain of dots (`a.getB().getC().getD()`) — each link
+  is a hidden dependency on that object's internal structure
+- Violating this creates fragile code: if `Customer`'s internal structure
+  changes, every caller reaching through it breaks
+- Directly supports low coupling — one of the most-repeated LLD interview
+  phrases ("low coupling, high cohesion") has this principle as one of
+  its concrete enforcement mechanisms
+
+**Remember:** if your code has more than one dot chained past the object
+you were originally given, that's usually a Law of Demeter violation
+worth calling out.
+
+---
+*Part of [LLD & OOD Interview Prep](../../README.md)*

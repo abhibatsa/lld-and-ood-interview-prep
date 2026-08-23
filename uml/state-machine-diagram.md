@@ -1,10 +1,20 @@
 # State Machine Diagram
 
-**Status:** 🔜 Not yet published
+Shows the states an object can be in and the transitions between them —
+the visual counterpart to the [State pattern](../design-patterns/behavioral/state.md).
 
-Part of **UML** in this repo's structure — see the
-[root README](../README.md) for the full index and how this fits in.
+![State machine diagram example](../assets/uml-state-machine-diagram-example.svg)
 
-*(Placeholder. Final content follows the repo's standard format: what it
-is, when it matters in practice, a real example, common mistakes, and a
-Best Practices section.)*
+## Key points
+- Rounded rectangles = states, arrows = transitions (labeled with the
+  triggering event)
+- Directly maps to an [Enum](../oop-fundamentals/enums.md) + [State pattern](../design-patterns/behavioral/state.md)
+  implementation — draw this diagram *before* coding any order/booking/
+  traffic-light style problem, it prevents missed edge-case transitions
+
+**Remember:** the most common interview miss isn't drawing the diagram
+wrong — it's forgetting an edge transition (e.g., "can a Placed order go
+straight to Cancelled without Shipping?"). Ask that question explicitly.
+
+---
+*Part of [LLD & OOD Interview Prep](../../README.md)*

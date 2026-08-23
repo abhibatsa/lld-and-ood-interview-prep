@@ -1,10 +1,19 @@
 # Class Diagram
 
-**Status:** 🔜 Not yet published
+Shows classes, their attributes/methods, and relationships — the diagram
+you'll actually draw in 90% of LLD interviews.
 
-Part of **UML** in this repo's structure — see the
-[root README](../README.md) for the full index and how this fits in.
+![Class diagram example](../assets/uml-class-diagram-example.svg)
 
-*(Placeholder. Final content follows the repo's standard format: what it
-is, when it matters in practice, a real example, common mistakes, and a
-Best Practices section.)*
+## Key notation to have memorized
+- `+` public, `-` private, `#` protected
+- Solid arrow = association, hollow diamond = aggregation, filled diamond = composition
+- Hollow triangle arrow = inheritance/implements
+- Dashed arrow = dependency
+
+**Remember:** you don't need perfect UML syntax under interview pressure —
+boxes with clear class names, key methods, and clearly-drawn relationship
+lines communicate 90% of the value. Don't burn time perfecting arrowheads.
+
+---
+*Part of [LLD & OOD Interview Prep](../../README.md)*

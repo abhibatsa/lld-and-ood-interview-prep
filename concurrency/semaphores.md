@@ -1,10 +1,24 @@
 # Semaphores
 
-**Status:** 🔜 Not yet published
+A counter-based lock that allows up to **N** threads into a section
+concurrently — a generalization of the mutex (a mutex is a semaphore with
+N=1, sometimes called a binary semaphore).
 
-Part of **Synchronization Primitives** in this repo's structure — see the
-[root README](../README.md) for the full index and how this fits in.
+```java
+Semaphore pool = new Semaphore(3); // max 3 concurrent connections
+void useConnection() {
+    pool.acquire();
+    try { /* use one of 3 connections */ } finally { pool.release(); }
+}
+```
 
-*(Placeholder. Final content follows the repo's standard format: what it
-is, when it matters in practice, a real example, common mistakes, and a
-Best Practices section.)*
+## When to use
+Limiting concurrent access to a resource with fixed capacity —
+connection pools, rate-limited API callers, bounded worker pools.
+
+**Remember:** the interview-ready one-liner — "a semaphore generalizes a
+mutex from 'one at a time' to 'N at a time'" — plus naming a concrete N-
+capacity resource (connection pool) as the use case.
+
+---
+*Part of [LLD & OOD Interview Prep](../../README.md)*

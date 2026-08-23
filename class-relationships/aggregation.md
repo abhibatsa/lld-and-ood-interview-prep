@@ -1,10 +1,23 @@
 # Aggregation
 
-**Status:** 🔜 Not yet published
+A "has-a" relationship with **shared** ownership — the child can outlive
+the parent.
 
-Part of **Class Relationships** in this repo's structure — see the
-[root README](../README.md) for the full index and how this fits in.
+```java
+class Department {
+    private List<Professor> professors; // professors exist independently
+}
+```
 
-*(Placeholder. Final content follows the repo's standard format: what it
-is, when it matters in practice, a real example, common mistakes, and a
-Best Practices section.)*
+![Class relationships compared](../assets/class-relationships-overview.svg)
+
+## Key points
+- A `Professor` can belong to zero, one, or move between departments and still exist
+- Represented in UML with a hollow diamond on the owner's side
+- Weaker than composition — deleting the `Department` doesn't delete the `Professor` objects
+
+**Remember:** the classic interview test — "if I delete the container, does
+the contained object still make sense on its own?" Yes → aggregation.
+
+---
+*Part of [LLD & OOD Interview Prep](../../README.md)*

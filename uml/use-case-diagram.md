@@ -1,10 +1,19 @@
 # Use Case Diagram
 
-**Status:** 🔜 Not yet published
+Shows actors (users/external systems) and the use cases (functional
+requirements) they interact with — a requirements-gathering tool, not a
+class-design tool.
 
-Part of **UML** in this repo's structure — see the
-[root README](../README.md) for the full index and how this fits in.
+![Use case diagram example](../assets/uml-use-case-diagram-example.svg)
 
-*(Placeholder. Final content follows the repo's standard format: what it
-is, when it matters in practice, a real example, common mistakes, and a
-Best Practices section.)*
+## Key points
+- Rarely the centerpiece of an LLD interview, but useful in the first two
+  minutes to nail down scope — "here are the actors and what each can do"
+  is a fast way to confirm requirements before designing classes
+- Stick figures = actors, ovals = use cases, lines = interactions
+
+**Remember:** if you're spending more than 2 minutes on this diagram in an
+interview, you're spending time in the wrong place — move to class design.
+
+---
+*Part of [LLD & OOD Interview Prep](../../README.md)*

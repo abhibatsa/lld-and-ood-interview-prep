@@ -1,10 +1,20 @@
 # Activity Diagram
 
-**Status:** 🔜 Not yet published
+Shows a workflow or business process as a flowchart — decisions,
+parallel activities, start/end points.
 
-Part of **UML** in this repo's structure — see the
-[root README](../README.md) for the full index and how this fits in.
+![Activity diagram example](../assets/uml-activity-diagram-example.svg)
 
-*(Placeholder. Final content follows the repo's standard format: what it
-is, when it matters in practice, a real example, common mistakes, and a
-Best Practices section.)*
+## Key points
+- Closer to a flowchart than a class-design tool — useful for showing
+  *process logic* (e.g., order approval workflow with branches) rather
+  than object collaboration
+- Diamond = decision point, rounded rectangle = activity, filled circle = start, ringed circle = end
+
+**Remember:** don't confuse this with a sequence diagram — activity
+diagrams show *process flow/logic*, sequence diagrams show *object
+message-passing*. If asked to model a workflow with branches, this is the
+right tool.
+
+---
+*Part of [LLD & OOD Interview Prep](../../README.md)*

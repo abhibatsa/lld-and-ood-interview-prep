@@ -1,10 +1,23 @@
 # Processes vs Threads
 
-**Status:** 🔜 Not yet published
+**Process:** an independent program with its own memory space — isolated,
+heavier to create, communication requires IPC (pipes, sockets, shared
+memory).
 
-Part of **Concurrency 101** in this repo's structure — see the
-[root README](../README.md) for the full index and how this fits in.
+**Thread:** a unit of execution *within* a process, sharing that
+process's memory space — lighter to create, communication is just shared
+variables (which is exactly why race conditions happen).
 
-*(Placeholder. Final content follows the repo's standard format: what it
-is, when it matters in practice, a real example, common mistakes, and a
-Best Practices section.)*
+## Key points
+- Threads sharing memory is both the point (fast, easy data sharing) and
+  the danger (uncoordinated access = race conditions)
+- Context switching between threads is cheaper than between processes,
+  since the OS doesn't need to swap the whole memory space
+
+**Remember:** "threads share memory, processes don't" is the one-line
+answer that unlocks the rest of concurrency — race conditions literally
+can't happen across processes without explicit shared memory, but they're
+the default risk across threads.
+
+---
+*Part of [LLD & OOD Interview Prep](../../README.md)*

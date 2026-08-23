@@ -1,10 +1,20 @@
 # Sequence Diagram
 
-**Status:** 🔜 Not yet published
+Shows objects and the order of messages (method calls) exchanged between
+them over time — the best tool for walking through *one specific flow*.
 
-Part of **UML** in this repo's structure — see the
-[root README](../README.md) for the full index and how this fits in.
+![Sequence diagram example](../assets/uml-sequence-diagram-example.svg)
 
-*(Placeholder. Final content follows the repo's standard format: what it
-is, when it matters in practice, a real example, common mistakes, and a
-Best Practices section.)*
+## Key points
+- Vertical lifelines = objects over time, horizontal arrows = method calls, in top-to-bottom chronological order
+- Extremely high-value in interviews for showing a *specific* flow (e.g.,
+  "place an order") after your class diagram is done — it proves your
+  classes actually collaborate correctly
+- Dashed return arrows show responses coming back
+
+**Remember:** pick your *hardest* flow to sequence-diagram, not the
+easiest one — that's where interviewers actually learn something about
+your design.
+
+---
+*Part of [LLD & OOD Interview Prep](../../README.md)*

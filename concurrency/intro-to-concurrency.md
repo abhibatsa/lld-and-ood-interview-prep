@@ -1,10 +1,20 @@
-# Intro to Concurrency
+# Introduction to Concurrency
 
-**Status:** 🔜 Not yet published
+Concurrency = multiple tasks making progress during overlapping time
+periods — they don't have to run at the exact same instant, just be
+*in progress* together, potentially interleaved on a single core.
 
-Part of **Concurrency 101** in this repo's structure — see the
-[root README](../README.md) for the full index and how this fits in.
+## Key points
+- The reason concurrency is hard: shared mutable state accessed from
+  multiple threads without coordination produces unpredictable results
+- Concurrency is a *design* concern (how do tasks interleave correctly);
+  [Parallelism](./concurrency-vs-parallelism.md) is an *execution* concern
+  (are they literally simultaneous on multiple cores)
 
-*(Placeholder. Final content follows the repo's standard format: what it
-is, when it matters in practice, a real example, common mistakes, and a
-Best Practices section.)*
+**Remember:** if a concurrency question comes up and you're not sure
+where to start, say this out loud: "the core question is always — what
+shared state exists, and what happens if two threads touch it at the same
+time?"
+
+---
+*Part of [LLD & OOD Interview Prep](../../README.md)*

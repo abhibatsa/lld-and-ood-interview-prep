@@ -1,10 +1,26 @@
-# Try Lock and Timed Locking
+# Try-Lock and Timed Locking
 
-**Status:** 🔜 Not yet published
+Instead of blocking indefinitely to acquire a lock, `tryLock()` returns
+immediately (success/failure), and a timed version waits up to a bounded
+duration before giving up.
 
-Part of **Synchronization Primitives** in this repo's structure — see the
-[root README](../README.md) for the full index and how this fits in.
+```java
+if (lock.tryLock(500, TimeUnit.MILLISECONDS)) {
+    try { /* got it */ } finally { lock.unlock(); }
+} else {
+    // couldn't acquire in time — fail fast, retry, or fall back
+}
+```
 
-*(Placeholder. Final content follows the repo's standard format: what it
-is, when it matters in practice, a real example, common mistakes, and a
-Best Practices section.)*
+## When to use
+Avoiding indefinite blocking in latency-sensitive systems — better to
+fail fast or fall back than hang a request thread forever waiting on a
+contended lock. Also useful for deadlock avoidance strategies (give up
+and retry rather than wait forever).
+
+**Remember:** "graceful degradation under lock contention" is the phrase
+to use — tryLock is what makes that possible instead of a thread hanging
+indefinitely.
+
+---
+*Part of [LLD & OOD Interview Prep](../../README.md)*
